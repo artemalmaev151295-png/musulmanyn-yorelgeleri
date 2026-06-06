@@ -23,19 +23,39 @@ export default function IslamicDiagram() {
       <div className="level-container">
         <h1 className="title">Musulmanyň esasy ýaşaýyş ýörelgeleri we düzgünleri</h1>
 
-        <div className="cards-grid">
-          {[
-            { title: 'Ylym almak', icon: '📚', detail: 'Bilim we ylym öwrenmek' },
-            { title: 'Amal etmek', icon: '🤲', detail: 'Bilimi durmuşa geçirmek' },
-            { title: 'Çagyrmak', icon: '📢', detail: 'Hakykata çagyrmak' },
-            { title: 'Sabyr etmek', icon: '💎', detail: 'Kynçylyga çydamak' }
-          ].map((item, idx) => (
-              <div key={idx} className="principle-card" onClick={() => navigateTo('surah')}>
-                <div className="card-icon">{item.icon}</div>
-                <h3 className="card-title">{item.title}</h3>
-                <p className="card-detail">{item.detail}</p>
-              </div>
-          ))}
+        <div
+            className="ayah-card"
+            onClick={() => navigateTo('surah')}
+            style={{
+              cursor: 'pointer',
+              background: 'linear-gradient(135deg, rgba(139, 90, 43, 0.2) 0%, rgba(76, 49, 23, 0.2) 100%)',
+              borderColor: 'rgba(212, 175, 122, 0.4)',
+              flexDirection: 'column',
+              padding: '2rem'
+            }}
+        >
+          <p style={{ color: '#f4e4c1', fontSize: '1.3rem', fontWeight: '600', marginBottom: '1.2rem', textAlign: 'center' }}>
+            Musulmanyň esasy ýaşaýyş ýörelgeleri we düzgünleri
+          </p>
+          <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', justifyContent: 'center' }}>
+            {[
+              { title: 'Ylym almak', icon: '📚' },
+              { title: 'Amal etmek', icon: '🤲' },
+              { title: 'Çagyrmak', icon: '📢' },
+              { title: 'Sabyr etmek', icon: '💎' }
+            ].map((item, idx) => (
+                <span key={idx} style={{
+                  color: '#c9b991',
+                  fontSize: '1rem',
+                  padding: '0.4rem 0.8rem',
+                  border: '1px solid rgba(212, 175, 122, 0.3)',
+                  borderRadius: '20px',
+                  background: 'rgba(0,0,0,0.15)'
+                }}>
+              {item.icon} {item.title}
+            </span>
+            ))}
+          </div>
         </div>
 
         <h1 className="title" style={{ marginTop: '3rem', marginBottom: '2rem' }}>Musulmanyň ilkinji bilmeli zady</h1>
@@ -56,6 +76,24 @@ export default function IslamicDiagram() {
             <p className="translation" style={{ fontSize: '1.1rem', lineHeight: '1.8' }}>
               Men şaýatlyk edýärin: Alladan başga ybadada hakly ilahiň ýokdygyňa we Muhammet ﷺ Allanyň guly hem resulydygyňa.
             </p>
+          </div>
+        </div>
+
+        <h1 className="title" style={{ marginTop: '3rem', marginBottom: '2rem' }}>Irdenki we gijeki zikirler we dogalar</h1>
+
+        <div
+            className="ayah-card"
+            onClick={() => navigateTo('zikirler')}
+            style={{
+              cursor: 'pointer',
+              background: 'linear-gradient(135deg, rgba(139, 90, 43, 0.2) 0%, rgba(76, 49, 23, 0.2) 100%)',
+              borderColor: 'rgba(212, 175, 122, 0.4)',
+              justifyContent: 'center'
+            }}
+        >
+          <div className="ayah-content" style={{ width: '100%', textAlign: 'center', padding: '1rem' }}>
+            <p style={{ fontSize: '2rem', marginBottom: '0.8rem' }}>🌅🌙</p>
+            <p style={{ color: '#f4e4c1', fontSize: '1.2rem', fontWeight: '600' }}>Irdenki we agşamky zikirler we dogalar</p>
           </div>
         </div>
       </div>
@@ -196,6 +234,280 @@ export default function IslamicDiagram() {
             </p>
           </div>
         </div>
+      </div>
+  );
+
+  const ZikirMenuLevel = () => (
+      <div className="level-container">
+        <h2 className="surah-title">Irdenki we gijeki zikirler we dogalar</h2>
+
+        <div className="info-box" style={{ marginBottom: '2rem' }}>
+          <div className="info-icon">⏰</div>
+          <div className="info-content">
+            <p style={{ marginBottom: '0.5rem' }}><strong style={{ color: '#f4e4c1' }}>Irdenki zikirleriň wagty</strong> — ertir namazdan başlap sagat 12:30 çenli</p>
+            <p><strong style={{ color: '#f4e4c1' }}>Agşamky zikirleriň wagty</strong> — ikindi namazdan üçinji gijä çenli</p>
+          </div>
+        </div>
+
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+          <div className="ayah-card" onClick={() => navigateTo('irdenky')} style={{ cursor: 'pointer' }}>
+            <div className="ayah-content" style={{ width: '100%', textAlign: 'center', padding: '1rem' }}>
+              <p style={{ fontSize: '2.5rem', marginBottom: '0.8rem' }}>🌅</p>
+              <p style={{ color: '#f4e4c1', fontSize: '1.3rem', fontWeight: '600' }}>Irdenki zikirler</p>
+              <p style={{ color: '#c9b991', marginTop: '0.5rem' }}>Ertir namazdan sagat 12:30 çenli</p>
+            </div>
+          </div>
+
+          <div className="ayah-card" onClick={() => navigateTo('agsamky')} style={{ cursor: 'pointer' }}>
+            <div className="ayah-content" style={{ width: '100%', textAlign: 'center', padding: '1rem' }}>
+              <p style={{ fontSize: '2.5rem', marginBottom: '0.8rem' }}>🌙</p>
+              <p style={{ color: '#f4e4c1', fontSize: '1.3rem', fontWeight: '600' }}>Agşamky zikirler</p>
+              <p style={{ color: '#c9b991', marginTop: '0.5rem' }}>Ikindi namazdan üçinji gijä çenli</p>
+            </div>
+          </div>
+        </div>
+      </div>
+  );
+
+  const ZCard = ({ arabic, turkmen, times }) => (
+      <div style={{
+        background: 'linear-gradient(135deg, rgba(139, 90, 43, 0.12) 0%, rgba(76, 49, 23, 0.12) 100%)',
+        border: '2px solid rgba(212, 175, 122, 0.25)',
+        borderRadius: '14px',
+        padding: '1.5rem',
+        marginBottom: '1.2rem',
+        backdropFilter: 'blur(10px)'
+      }}>
+        <p style={{ fontFamily: "'Amiri', serif", fontSize: '1.5rem', color: '#f4e4c1', direction: 'rtl', textAlign: 'right', marginBottom: '1rem', lineHeight: '2' }}>{arabic}</p>
+        <p style={{ color: '#c9b991', fontSize: '1rem', lineHeight: '1.7' }}>{turkmen}</p>
+        {times && <p style={{ color: '#d4af7a', fontSize: '0.9rem', marginTop: '0.8rem', fontStyle: 'italic' }}>({times})</p>}
+      </div>
+  );
+
+  const IrdenkyZikirler = () => (
+      <div className="level-container">
+        <h2 className="surah-title">Irdenki zikirler 🌅</h2>
+
+        <ZCard
+            arabic="أَصْبَحْنَا وَأَصْبَحَ الْمُلْكُ لِلَّهِ، وَالْحَمْدُ لِلَّهِ، لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ، وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ، رَبِّ أَسْأَلُكَ خَيْرَ مَا فِي هَذَا الْيَوْمِ وَخَيْرَ مَا بَعْدَهُ، وَأَعُوذُ بِكَ مِنْ شَرِّ مَا فِي هَذَا الْيَوْمِ وَشَرِّ مَا بَعْدَهُ، رَبِّ أَعُوذُ بِكَ مِنَ الْكَسَلِ وَسُوءِ الْكِبَرِ، رَبِّ أَعُوذُ بِكَ مِنْ عَذَابٍ فِي النَّارِ وَعَذَابٍ فِي الْقَبْرِ"
+            turkmen="Biz (Allahyň rehmeti bilen) irdene çykdyk we Allahyň mülki hem dowamlydyr. Hemme öwgiler Allaha bolsun. Ondan başga hak ilah ýokdur, Onyň hiç hili şärigi hem ýokdur. Hemme mülk Oňa degişli, Hemme öwgilere ol mynasyp, we Ol ähli zady etmäge güýçlidir. Eý Rabbim, şu günüň haýyrlaryny we ondan soňra geljek haýyrlyklary Senden sorayaryn! Şu günüň şerlerinden we ondan soňra geljek şerlerden meni gora! Eý Rabbim, meni ýaltalykdan we erbetlikden gora! Eý Rabbim, meni dowzahdan we gabyr azabyndan gora!"
+        />
+
+        <ZCard
+            arabic="اللَّهُمَّ بِكَ أَصْبَحْنَا، وَبِكَ أَمْسَيْنَا، وَبِكَ نَحْيَا، وَبِكَ نَمُوتُ وَإِلَيْكَ النُّشُورُ"
+            turkmen="Eý, Allahym! Seniň (rehmetiň) bilen irdene çykýarys, Seniň (rehmetiň) bilen agşama ýetýäris, Seniň (rehmetiň) bilen ýaşaýarys, Seniň (buýrugyň) bilen ölýäris, we Seniň öňüňde direlýäris."
+        />
+
+        <ZCard
+            arabic="اللَّهُمَّ أَنْتَ رَبِّي لَا إِلَهَ إِلَّا أَنْتَ، خَلَقْتَنِي وَأَنَا عَبْدُكَ، وَأَنَا عَلَى عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ، أَعُوذُ بِكَ مِنْ شَرِّ مَا صَنَعْتُ، أَبُوءُ لَكَ بِنِعْمَتِكَ عَلَيَّ، وَأَبُوءُ بِذَنْبِي فَاغْفِرْ لِي فَإِنَّهُ لَا يَغْفِرُ الذُّنُوبَ إِلَّا أَنْتَ"
+            turkmen="Eý Allahym! Sen meniň Rabbim, Senden başga hak ilah ýokdur. Sen meni ýaratdyň we men hem Seniň guluň. Men Saňa beren wadalarmý güjimiň ýetdiginden berjaý ederin we men Seniň wadaňa ynanýaryn. Meni günälerimiň şerinden gora. Seniň maňa beren ähli ýagşylyklaryňy men ykrar edýärin we men öz günälerimi hem boýun alýaryn. Meni bagyşla, çünki günäleri diňe sen bagyşlap bilersiň."
+        />
+
+        <ZCard
+            arabic="اللَّهُمَّ إِنِّي أَصْبَحْتُ أُشْهِدُكَ، وَأُشْهِدُ حَمَلَةَ عَرْشِكَ، وَمَلَائِكَتِكَ، وَجَمِيعَ خَلْقِكَ، أَنَّكَ أَنْتَ اللَّهُ لَا إِلَهَ إِلَّا أَنْتَ وَحْدَكَ لَا شَرِيكَ لَكَ، وَأَنَّ مُحَمَّدًا عَبْدُكَ وَرَسُولُكَ"
+            turkmen="Eý Allahym! Men Seni, Seniň Arşyňy göterýän perişdeleri, ähli perişdeleriňi we ähli ýaradan zatlaryňy irdene çykmaklygym bilen şaýat tutýaryn: Seniň Alladygyňa, Senden başga hak ilahyň ýokdugyna, Seniň hiç bir şärigiň ýokdugyna we Muhammediň Seniň guluň we pygamberiňdigine."
+            times="Bu doga dört gezek aýdylýar"
+        />
+
+        <ZCard
+            arabic="اللَّهُمَّ مَا أَصْبَحَ بِي مِنْ نِعْمَةٍ أَوْ بِأَحَدٍ مِنْ خَلْقِكَ، فَمِنْكَ وَحْدَكَ لَا شَرِيكَ لَكَ، فَلَكَ الْحَمْدُ وَلَكَ الشُّكْرُ"
+            turkmen="Eý Allahym! Mende we her bir kişide bolan ähli haýyrlar diňe Sendendir. Seniň şärigiň ýokdur. Ähli öwgüler we şükürler diňe Saňa mynasypdyr."
+        />
+
+        <ZCard
+            arabic="اللَّهُمَّ عَافِنِي فِي بَدَنِي، اللَّهُمَّ عَافِنِي فِي سَمْعِي، اللَّهُمَّ عَافِنِي فِي بَصَرِي، لَا إِلَهَ إِلَّا أَنْتَ، اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْكُفْرِ وَالْفَقْرِ، وَأَعُوذُ بِكَ مِنْ عَذَابِ الْقَبْرِ، لَا إِلَهَ إِلَّا أَنْتَ"
+            turkmen="Eý Allahym! Meniň bedenimi, eşidişimi we gözümi hemme erbetlikden gora. Senden başga hak ilah ýokdur. Eý Allahym! Meni kapyrlykdan we garyplykdan gora. Meni gabyryň azabyndan gora. Senden başga hak ilah ýokdur."
+            times="üç gezek aýdylýar"
+        />
+
+        <ZCard
+            arabic="حَسْبِيَ اللَّهُ لَا إِلَهَ إِلَّا هُوَ عَلَيْهِ تَوَكَّلْتُ وَهُوَ رَبُّ الْعَرْشِ الْعَظِيمِ"
+            turkmen="Meniň üçin Allah ýeterlikdir. Ondan başga hak ilah ýokdur. Men Oňa daýanýaryn. Ol beýik Arşyň Rabbidir."
+            times="Bu doga 7 gezek aýdylýar"
+        />
+
+        <ZCard
+            arabic="اللَّهُمَّ إِنِّي أَسْأَلُكَ الْعَفْوَ وَالْعَافِيَةَ فِي الدُّنْيَا وَالآخِرَةِ، اللَّهُمَّ إِنِّي أَسْأَلُكَ الْعَفْوَ وَالْعَافِيَةَ فِي دِينِي وَدُنْيَايَ وَأَهْلِي وَمَالِي، اللَّهُمَّ اسْتُرْ عَوْرَاتِي وَآمِنْ رَوْعَاتِي، اللَّهُمَّ احْفَظْنِي مِنْ بَيْنِ يَدَيَّ وَمِنْ خَلْفِي وَعَنْ يَمِينِي وَعَنْ شِمَالِي وَمِنْ فَوْقِي، وَأَعُوذُ بِعَظَمَتِكَ أَنْ أُغْتَالَ مِنْ تَحْتِي"
+            turkmen="Eý Allahym! Senden bu dünýäde we ahyretde günämi bagyşlamagyňy hemde hemme erbetlikden goramaklygy soraýaryn. Eý Allahym! Meniň dinimi, dünýämi, maşgalami we emlägimy hemme erbetlikden gora. Eý Allahym! Meniň kemçiliklerimi ört, gorkularymdana aman et. Eý Allahym! Meni öňümden, yzymdan, sagymdan, çepimden we ýokarymdan gorap sakla! Meni aşagymdan duýdansyz gelýan heläkçilikden Öz beýikligiň bilen gora!"
+        />
+
+        <ZCard
+            arabic="اللَّهُمَّ عَالِمَ الْغَيْبِ وَالشَّهَادَةِ، فَاطِرَ السَّمَوَاتِ وَالأَرْضِ، رَبَّ كُلِّ شَيْءٍ وَمَلِيكَهُ، أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا أَنْتَ، أَعُوذُ بِكَ مِنْ شَرِّ نَفْسِي وَمِنْ شَرِّ الشَّيْطَانِ وَشِرْكِهِ، وَأَنْ أَقْتَرِفَ عَلَى نَفْسِي سُوءًا أَوْ أَجُرَّهُ إِلَى مُسْلِمٍ"
+            turkmen="Eý Allahym! Eý gizlin we äşgär zatlary bilýän, Eý asmanlary we ýeri ýaradyn, Eý her bir zadyň eýesi we patyşasy! Senden başga hak ilahiň ýokdugyna men şaýatlyk edýärin. Öz nebsimiň erbetliginden we şeýtanyň erbetliginden hem-de onuň şirk etdirmekliginden meni gora, we özüme erbetlik etmekden ýa-da musluman birine erbetlik ýetirmekden meni gora!"
+        />
+
+        <ZCard
+            arabic="بِسْمِ اللَّهِ الَّذِي لَا يَضُرُّ مَعَ اسْمِهِ شَيْءٌ فِي الأَرْضِ وَلَا فِي السَّمَاءِ وَهُوَ السَّمِيعُ الْعَلِيمُ"
+            turkmen="Men Alladan gorag soraýaryn, çünki kim Allahyň goragy astynda bolsa oňa ýerde we asmanda hiç zyýan ýetmez. Ol eşidýändir we bilýändir."
+            times="Üç gezek okalýar"
+        />
+
+        <ZCard
+            arabic="رَضِيتُ بِاللَّهِ رَبًّا، وَبِالإِسْلَامِ دِينًا، وَبِمُحَمَّدٍ نَبِيًّا"
+            turkmen="Allah Rabbim diýip we Yslam dinim diýip we Muhammed pygamberim diýip men razy boldum."
+            times="3 gezek aýdylýar"
+        />
+
+        <ZCard
+            arabic="يَا حَيُّ يَا قَيُّومُ بِرَحْمَتِكَ أَسْتَغِيثُ، أَصْلِحْ لِي شَأْنِي كُلَّهُ، وَلَا تَكِلْنِي إِلَى نَفْسِي طَرْفَةَ عَيْنٍ"
+            turkmen="Eý Diri we Barlygy saklaýan! Seniň Rehimiň bilen senden ýardam soraýaryn. Meniň hemme işlerimi düzelt we meni bir salym hem kömegiňden aýyrma."
+        />
+
+        <ZCard
+            arabic="أَصْبَحْنَا وَأَصْبَحَ الْمُلْكُ لِلَّهِ رَبِّ الْعَالَمِينَ، اللَّهُمَّ إِنِّي أَسْأَلُكَ خَيْرَ هَذَا الْيَوْمِ: فَتْحَهُ وَنَصْرَهُ وَنُورَهُ وَبَرَكَتَهُ وَهُدَاهُ، وَأَعُوذُ بِكَ مِنْ شَرِّ مَا فِيهِ وَشَرِّ مَا بَعْدَهُ"
+            turkmen="Biz (Allahyň rehmeti bilen) irdene çykdyk we Älemleriň eýesi bolan Allahyň mülki dowamlydyr. Eý Allahym! Men bu güniň haýyrlaryny Senden soraýaryn: hem-de onuň üstünligini, ýeňşini, nuryny, bereketini we hidayatyny. Şu günüň içindäki we ondan soňky geljek şerlerden meni gora!"
+        />
+
+        <ZCard
+            arabic="أَصْبَحْنَا عَلَى فِطْرَةِ الإِسْلَامِ، وَعَلَى كَلِمَةِ الإِخْلَاصِ، وَعَلَى دِينِ نَبِيِّنَا مُحَمَّدٍ، وَعَلَى مِلَّةِ أَبِينَا إِبْرَاهِيمَ، حَنِيفًا مُسْلِمًا وَمَا كَانَ مِنَ الْمُشْرِكِينَ"
+            turkmen="Biz hak bolan yslam dini bilen we kelime şaýatlyk sözi bilen we Muhammed pygamberiň dini bilen we hiç bir sirk etmedik, musulman we Allany birleýji bolan Ibrahim atamyzyň dini bilen ertirledik."
+        />
+
+        <ZCard
+            arabic="سُبْحَانَ اللَّهِ وَبِحَمْدِهِ"
+            turkmen="Allah kemsizdirdir we ol öwgülere mynasypdyr."
+            times="100 gezek okalýar"
+        />
+
+        <ZCard
+            arabic="لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ، وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ"
+            turkmen="Şärigi bolmadyk ýeke täk Alladan başga hiç hakly ilah ýokdur. Hemme mülk we öwgiler oňa degişlidir we Ol ähli zady etmäge güýçlidir."
+            times="10 gezek okalýar"
+        />
+
+        <ZCard
+            arabic="لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ، وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ"
+            turkmen="Şärigi bolmadyk ýeke täk Alladan başga hiç hakly ilah ýokdur. Hemme mülk we öwgiler oňa degişlidir we Ol ähli zady etmäge güýçlidir."
+            times="100 gezek okalýar — Günüň dowamynda"
+        />
+
+        <ZCard
+            arabic="سُبْحَانَ اللَّهِ وَبِحَمْدِهِ، عَدَدَ خَلْقِهِ، وَرِضَا نَفْسِهِ، وَزِنَةَ عَرْشِهِ، وَمِدَادَ كَلِمَاتِهِ"
+            turkmen="Allaha Päklik we öwgiler bolsun! Onuň ýaradan zatlarynyň sanyça bolsun, Onuň razy bolan mukdaryça bolsun, Onuň Arşynyň agrama deň bolsun we Onuň sözleriniň sanyça bolsun."
+            times="üç gezek okalýar"
+        />
+
+        <ZCard
+            arabic="اللَّهُمَّ إِنِّي أَسْأَلُكَ عِلْمًا نَافِعًا، وَرِزْقًا طَيِّبًا، وَعَمَلًا مُتَقَبَّلًا"
+            turkmen="Eý Allahym! Men Senden peýdaly bilim, halal rysgal we kabul edilýän amal soraýaryn."
+            times="irde okalýar"
+        />
+
+        <ZCard
+            arabic="أَسْتَغْفِرُ اللَّهَ وَأَتُوبُ إِلَيْهِ"
+            turkmen="Alladan ötünç soraýaryn we Oňa towa edýärin."
+            times="Günde 100 gezek okalýar"
+        />
+
+        <ZCard
+            arabic="اللَّهُمَّ صَلِّ وَسَلِّمْ عَلَى نَبِيِّنَا مُحَمَّدٍ"
+            turkmen="Eý Allahym, pygamberimiz Muhammedi öw we oňa salamatlyk ber!"
+            times="10 gezek okalýar"
+        />
+      </div>
+  );
+
+  const AgsamkyZikirler = () => (
+      <div className="level-container">
+        <h2 className="surah-title">Agşamky zikirler 🌙</h2>
+
+        <ZCard
+            arabic="أَمْسَيْنَا وَأَمْسَى الْمُلْكُ لِلَّهِ، وَالْحَمْدُ لِلَّهِ، لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ، وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ، رَبِّ أَسْأَلُكَ خَيْرَ مَا فِي هَذِهِ اللَّيْلَةِ وَخَيْرَ مَا بَعْدَهَا، وَأَعُوذُ بِكَ مِنْ شَرِّ مَا فِي هَذِهِ اللَّيْلَةِ وَشَرِّ مَا بَعْدَهَا، رَبِّ أَعُوذُ بِكَ مِنَ الْكَسَلِ وَسُوءِ الْكِبَرِ، رَبِّ أَعُوذُ بِكَ مِنْ عَذَابٍ فِي النَّارِ وَعَذَابٍ فِي الْقَبْرِ"
+            turkmen="Biz (Allahyň rehmeti bilen) agşama ýetdik we Allahyň mülki hem dowamlydyr. Hemme öwgiler Allaha bolsun. Ondan başga hak ilah ýokdur, Onyň hiç hili şärigi hem ýokdur. Hemme mülk Oňa degişli, Hemme öwgilere ol mynasypdyr, we Ol ähli zady etmäge güýçlidir. Eý Rabbim, şu gijäniň haýyrlaryny we ondan soňra geljek haýyrlyklary Senden sorayaryn! Şu gijäniň şerlerinden we ondan soňra geljek şerlerden meni gora! Eý Rabbim, meni ýaltalykdan we erbet garrylykdan gora! Eý Rabbim, meni dowzahdan we gabyr azabyndan gora!"
+        />
+
+        <ZCard
+            arabic="اللَّهُمَّ بِكَ أَمْسَيْنَا، وَبِكَ أَصْبَحْنَا، وَبِكَ نَحْيَا، وَبِكَ نَمُوتُ وَإِلَيْكَ الْمَصِيرُ"
+            turkmen="Eý, Allahym! Seniň (rehmetiň) bilen agşama ýetýäris, Seniň (rehmetiň) bilen irdene çykýarys, Seniň (rehmetiň) bilen ýaşaýarys, Seniň (buýrugyň) bilen ölýäris, we Seniň öňüňde direlýäris!"
+        />
+
+        <ZCard
+            arabic="اللَّهُمَّ أَنْتَ رَبِّي لَا إِلَهَ إِلَّا أَنْتَ، خَلَقْتَنِي وَأَنَا عَبْدُكَ، وَأَنَا عَلَى عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ، أَعُوذُ بِكَ مِنْ شَرِّ مَا صَنَعْتُ، أَبُوءُ لَكَ بِنِعْمَتِكَ عَلَيَّ، وَأَبُوءُ بِذَنْبِي فَاغْفِرْ لِي فَإِنَّهُ لَا يَغْفِرُ الذُّنُوبَ إِلَّا أَنْتَ"
+            turkmen="Eý Allahym! Sen meniň Rabbim, Senden başga hak ilah ýokdur. Sen meni ýaratdyň, men Seniň guluň. Men Saňa beren wadalarmý güjimiň ýetdiginden berjaý ederin we men Seniň wadaňa ynanýaryn. Meni günälerimiň şerinden gora. Seniň maňa beren ähli ýagşylyklaryňy men ykrar edýärin we men öz günälerimi hem boýun alýaryn. Meni bagyşla, çünki günäleri diňe sen bagyşlap bilersiň!"
+        />
+
+        <ZCard
+            arabic="اللَّهُمَّ إِنِّي أَمْسَيْتُ أُشْهِدُكَ، وَأُشْهِدُ حَمَلَةَ عَرْشِكَ، وَمَلَائِكَتِكَ، وَجَمِيعَ خَلْقِكَ، أَنَّكَ أَنْتَ اللَّهُ لَا إِلَهَ إِلَّا أَنْتَ وَحْدَكَ لَا شَرِيكَ لَكَ، وَأَنَّ مُحَمَّدًا عَبْدُكَ وَرَسُولُكَ"
+            turkmen="Eý Allahym! Men Seni, Seniň Arşyňy göterýän perişdeleri, ähli perişdeleriňi we ähli ýaradan zatlaryňy agşama çykmaklygym bilen şaýat tutýaryn: Seniň Alladygyňa, Senden başga hak ilahyň ýokdugyna, Seniň hiç bir şärigiň ýokdugyna we Muhammediň Seniň guluň we pygamberiňdigine."
+            times="Bu doga dört gezek aýdylýar"
+        />
+
+        <ZCard
+            arabic="اللَّهُمَّ مَا أَمْسَى بِي مِنْ نِعْمَةٍ أَوْ بِأَحَدٍ مِنْ خَلْقِكَ، فَمِنْكَ وَحْدَكَ لَا شَرِيكَ لَكَ، فَلَكَ الْحَمْدُ وَلَكَ الشُّكْرُ"
+            turkmen="Eý Allahym! Mende we her bir kişide bolan ähli haýyrlar diňe Sendendir. Seniň şärigiň ýokdur. Ähli öwgüler we şükürler diňe Saňa degişlidir."
+        />
+
+        <ZCard
+            arabic="اللَّهُمَّ عَافِنِي فِي بَدَنِي، اللَّهُمَّ عَافِنِي فِي سَمْعِي، اللَّهُمَّ عَافِنِي فِي بَصَرِي، لَا إِلَهَ إِلَّا أَنْتَ، اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْكُفْرِ وَالْفَقْرِ، وَأَعُوذُ بِكَ مِنْ عَذَابِ الْقَبْرِ، لَا إِلَهَ إِلَّا أَنْتَ"
+            turkmen="Eý Allahym! Meniň bedenimi, eşidişimi we gözümi hemme erbetlikden gora. Senden başga hak ilah ýokdur. Eý Allahym! Meni kapyrlykdan we garyplykdan gora. Meni gabyryň azabyndan gora. Senden başga hak ilah ýokdur."
+            times="üç gezek aýdylýar"
+        />
+
+        <ZCard
+            arabic="حَسْبِيَ اللَّهُ لَا إِلَهَ إِلَّا هُوَ عَلَيْهِ تَوَكَّلْتُ وَهُوَ رَبُّ الْعَرْشِ الْعَظِيمِ"
+            turkmen="Meniň üçin Allah ýeterlikdir. Ondan başga hak ilah ýokdur. Men Oňa daýanýaryn. Ol beýik Arşyň Rabbidir."
+            times="Bu doga 7 gezek aýdylýar"
+        />
+
+        <ZCard
+            arabic="اللَّهُمَّ إِنِّي أَسْأَلُكَ الْعَفْوَ وَالْعَافِيَةَ فِي الدُّنْيَا وَالآخِرَةِ، اللَّهُمَّ إِنِّي أَسْأَلُكَ الْعَفْوَ وَالْعَافِيَةَ فِي دِينِي وَدُنْيَايَ وَأَهْلِي وَمَالِي، اللَّهُمَّ اسْتُرْ عَوْرَاتِي وَآمِنْ رَوْعَاتِي، اللَّهُمَّ احْفَظْنِي مِنْ بَيْنِ يَدَيَّ وَمِنْ خَلْفِي وَعَنْ يَمِينِي وَعَنْ شِمَالِي وَمِنْ فَوْقِي، وَأَعُوذُ بِعَظَمَتِكَ أَنْ أُغْتَالَ مِنْ تَحْتِي"
+            turkmen="Eý Allahym! Senden bu dünýäde we ahyretde günämi bagyşlamagyňy hemde hemme erbetlikden goramaklygy soraýaryn. Eý Allahym! Meniň dinimi, dünýämi, maşgalami we emlägimy hemme erbetlikden gora. Eý Allahym! Meniň kemçiliklerimi ört, gorkularymdana aman et. Eý Allahym! Meni öňümden, yzymdan, sagymdan, çepimden we ýokarymdan gorap sakla. Meni aşagymdan duýdansyz gelýan heläkçilikden Öz beýikligiň bilen gora!"
+        />
+
+        <ZCard
+            arabic="اللَّهُمَّ عَالِمَ الْغَيْبِ وَالشَّهَادَةِ، فَاطِرَ السَّمَوَاتِ وَالأَرْضِ، رَبَّ كُلِّ شَيْءٍ وَمَلِيكَهُ، أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا أَنْتَ، أَعُوذُ بِكَ مِنْ شَرِّ نَفْسِي وَمِنْ شَرِّ الشَّيْطَانِ وَشِرْكِهِ، وَأَنْ أَقْتَرِفَ عَلَى نَفْسِي سُوءًا أَوْ أَجُرَّهُ إِلَى مُسْلِمٍ"
+            turkmen="Eý Allahym! Eý gizlin we äşgär zatlary biliji, Eý asmanlary we ýeri ýaradyjy, Eý her bir zadyň eýesi we patyşasy! Senden başga hak ilahiň ýokdugyna men şaýatlyk edýärin. Öz nebsimiň erbetliginden we şeýtanyň erbetliginden hem-de onuň şirk etdirmekliginden meni gora, we özüme erbetlik etmekden ýa-da musulman birine erbetlik ýetirmekden meni gora!"
+        />
+
+        <ZCard
+            arabic="بِسْمِ اللَّهِ الَّذِي لَا يَضُرُّ مَعَ اسْمِهِ شَيْءٌ فِي الأَرْضِ وَلَا فِي السَّمَاءِ وَهُوَ السَّمِيعُ الْعَلِيمُ"
+            turkmen="Men Alladan gorag soraýaryn, çünki kim Allahyň goragy astynda bolsa oňa ýerde we asmanda hiç zyýan ýetmez. Ol eşidýändir we bilýändir."
+            times="Üç gezek okalýar"
+        />
+
+        <ZCard
+            arabic="رَضِيتُ بِاللَّهِ رَبًّا، وَبِالإِسْلَامِ دِينًا، وَبِمُحَمَّدٍ نَبِيًّا"
+            turkmen="Allah Rabbim diýip we Yslam dinim diýip we Muhammed pygamberim diýip men razy boldum."
+            times="3 gezek aýdylýar"
+        />
+
+        <ZCard
+            arabic="يَا حَيُّ يَا قَيُّومُ بِرَحْمَتِكَ أَسْتَغِيثُ، أَصْلِحْ لِي شَأْنِي كُلَّهُ، وَلَا تَكِلْنِي إِلَى نَفْسِي طَرْفَةَ عَيْنٍ"
+            turkmen="Eý Diri we Barlygy saklaýan! Seniň Rehimiň bilen senden ýardam soraýaryn. Meniň hemme işlerimi düzelt we meni bir salym hem kömegiňden aýyrma!"
+        />
+
+        <ZCard
+            arabic="أَمْسَيْنَا وَأَمْسَى الْمُلْكُ لِلَّهِ رَبِّ الْعَالَمِينَ، اللَّهُمَّ إِنِّي أَسْأَلُكَ خَيْرَ هَذِهِ اللَّيْلَةِ: فَتْحَهَا وَنَصْرَهَا وَنُورَهَا وَبَرَكَتَهَا وَهُدَاهَا، وَأَعُوذُ بِكَ مِنْ شَرِّ مَا فِيهَا وَشَرِّ مَا بَعْدَهَا"
+            turkmen="Biz (Allahyň rehmeti bilen) agşama ýetdik we Älemleriň eýesi bolan Allahyň mülki dowamlydyr. Eý Allahym! Men bu agşamyň haýyrlaryny Senden soraýaryn: hem-de onuň üstünligini, ýeňşini, nuryny, bereketini we hidayatyny. Şu agşamyň içindäki we ondan soňky geljek şerlerden meni gora!"
+        />
+
+        <ZCard
+            arabic="أَمْسَيْنَا عَلَى فِطْرَةِ الإِسْلَامِ، وَعَلَى كَلِمَةِ الإِخْلَاصِ، وَعَلَى دِينِ نَبِيِّنَا مُحَمَّدٍ، وَعَلَى مِلَّةِ أَبِينَا إِبْرَاهِيمَ، حَنِيفًا مُسْلِمًا وَمَا كَانَ مِنَ الْمُشْرِكِينَ"
+            turkmen="Biz hak bolan yslam dini bilen we kelime şaýatlyk sözi bilen we Muhammed pygamberiň dini bilen we hiç bir sirk etmedik, musulman we Allany birleýji bolan Ibrahim atamyzyň dini bilen ertirledik."
+        />
+
+        <ZCard
+            arabic="سُبْحَانَ اللَّهِ وَبِحَمْدِهِ"
+            turkmen="Allah kemsizdirdir we ol öwgülere mynasypdyr."
+            times="100 gezek okalýar"
+        />
+
+        <ZCard
+            arabic="لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ، وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ"
+            turkmen="Şärigi bolmadyk ýeke täk Alladan başga hiç hakly ilah ýokdur. Hemme mülk we öwgiler oňa degişlidir we Ol ähli zady etmäge güýçlidir."
+            times="10 gezek okalýar"
+        />
+
+        <ZCard
+            arabic="اللَّهُمَّ صَلِّ وَسَلِّمْ عَلَى نَبِيِّنَا مُحَمَّدٍ"
+            turkmen="Eý Allahym, pygamberimiz Muhammedi öw we oňa salamatlyk ber!"
+            times="10 gezek okalýar"
+        />
+
+        <ZCard
+            arabic="أَعُوذُ بِكَلِمَاتِ اللَّهِ التَّامَّاتِ مِنْ شَرِّ مَا خَلَقَ"
+            turkmen="Men Allahyň kämil sözleri bilen onuň ýaradan zatlarynyň şerinden gorag soraýaryn!"
+        />
       </div>
   );
 
@@ -847,6 +1159,9 @@ export default function IslamicDiagram() {
         )}
 
         {currentLevel === 'main' && <MainLevel />}
+        {currentLevel === 'zikirler' && <ZikirMenuLevel />}
+        {currentLevel === 'irdenky' && <IrdenkyZikirler />}
+        {currentLevel === 'agsamky' && <AgsamkyZikirler />}
         {currentLevel === 'shahadah-details' && <ShahadahDetailsLevel />}
         {currentLevel === 'surah' && <SurahLevel />}
         {currentLevel === 'ayah-1' && <Ayah1Detail />}

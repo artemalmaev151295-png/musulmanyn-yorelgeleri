@@ -784,6 +784,7 @@ export default function IslamicDiagram() {
           position: relative;
           z-index: 1;
           animation: fadeIn 0.5s ease-out;
+          padding-top: 4rem;
         }
 
         @keyframes fadeIn {
@@ -798,7 +799,7 @@ export default function IslamicDiagram() {
         }
 
         .back-button {
-          background: rgba(139, 90, 43, 0.2);
+          background: rgba(139, 90, 43, 0.85);
           border: 2px solid #d4af7a;
           color: #f4e4c1;
           padding: 0.75rem 1.5rem;
@@ -809,13 +810,12 @@ export default function IslamicDiagram() {
           display: flex;
           align-items: center;
           gap: 0.5rem;
-          margin-bottom: 2rem;
           transition: all 0.3s ease;
           backdrop-filter: blur(10px);
-          position: sticky;
+          position: fixed;
           top: 1rem;
-          z-index: 100;
-          width: fit-content;
+          left: 1rem;
+          z-index: 1000;
         }
 
         .back-button:hover {

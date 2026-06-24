@@ -21,10 +21,28 @@ export default function IslamicDiagram() {
 
   const MainLevel = () => (
     <div className="level-container">
+      <h1 className="title">Irdenki we gijeki zikirler we dogalar</h1>
+
+      <div
+        className="ayah-card main-menu-card"
+        onClick={() => navigateTo('zikirler')}
+        style={{
+          cursor: 'pointer',
+          background: 'linear-gradient(135deg, rgba(139, 90, 43, 0.2) 0%, rgba(76, 49, 23, 0.2) 100%)',
+          borderColor: 'rgba(212, 175, 122, 0.4)',
+          justifyContent: 'center'
+        }}
+      >
+        <div className="ayah-content" style={{ width: '100%', textAlign: 'center', padding: '0.75rem' }}>
+          <p style={{ fontSize: '2rem', marginBottom: '0.6rem' }}>🌅🌙</p>
+          <p style={{ color: '#f4e4c1', fontSize: '1.2rem', fontWeight: '600' }}>Irdenki we agşamky zikirler we dogalar</p>
+        </div>
+      </div>
+
       <h1 className="title">Musulmanyň esasy ýaşaýyş ýörelgeleri we düzgünleri</h1>
       
       <div
-        className="ayah-card"
+        className="ayah-card main-menu-card"
         onClick={() => navigateTo('surah')}
         style={{
           cursor: 'pointer',
@@ -58,10 +76,10 @@ export default function IslamicDiagram() {
         </div>
       </div>
 
-      <h1 className="title" style={{ marginTop: '3rem', marginBottom: '2rem' }}>Musulmanyň ilkinji bilmeli zady</h1>
+      <h1 className="title">Musulmanyň ilkinji bilmeli zady</h1>
 
       <div 
-        className="ayah-card" 
+        className="ayah-card main-menu-card" 
         onClick={() => navigateTo('shahadah-details')}
         style={{ 
           cursor: 'pointer',
@@ -76,24 +94,6 @@ export default function IslamicDiagram() {
           <p className="translation" style={{ fontSize: '1.1rem', lineHeight: '1.8' }}>
             Men şaýatlyk edýärin: Alladan başga ybadada hakly ilahiň ýokdygyňa we Muhammet ﷺ Allanyň guly hem resulydygyňa.
           </p>
-        </div>
-      </div>
-
-      <h1 className="title" style={{ marginTop: '3rem', marginBottom: '2rem' }}>Irdenki we gijeki zikirler we dogalar</h1>
-
-      <div
-        className="ayah-card"
-        onClick={() => navigateTo('zikirler')}
-        style={{
-          cursor: 'pointer',
-          background: 'linear-gradient(135deg, rgba(139, 90, 43, 0.2) 0%, rgba(76, 49, 23, 0.2) 100%)',
-          borderColor: 'rgba(212, 175, 122, 0.4)',
-          justifyContent: 'center'
-        }}
-      >
-        <div className="ayah-content" style={{ width: '100%', textAlign: 'center', padding: '1rem' }}>
-          <p style={{ fontSize: '2rem', marginBottom: '0.8rem' }}>🌅🌙</p>
-          <p style={{ color: '#f4e4c1', fontSize: '1.2rem', fontWeight: '600' }}>Irdenki we agşamky zikirler we dogalar</p>
         </div>
       </div>
     </div>
@@ -784,7 +784,7 @@ export default function IslamicDiagram() {
           position: relative;
           z-index: 1;
           animation: fadeIn 0.5s ease-out;
-          padding-top: 4rem;
+          padding-top: 1.5rem;
         }
 
         @keyframes fadeIn {
@@ -829,9 +829,17 @@ export default function IslamicDiagram() {
           font-size: 2.5rem;
           font-weight: 700;
           text-align: center;
-          margin-bottom: 3rem;
+          margin: 1.75rem 0 1rem;
           text-shadow: 0 2px 10px rgba(212, 175, 122, 0.3);
           line-height: 1.4;
+        }
+
+        .level-container > .title:first-child {
+          margin-top: 0;
+        }
+
+        .main-menu-card {
+          margin-bottom: 1.5rem;
         }
 
         .cards-grid {
@@ -1129,8 +1137,18 @@ export default function IslamicDiagram() {
             padding: 1rem;
           }
 
+          .level-container {
+            padding-top: 0.75rem;
+          }
+
           .title {
             font-size: 1.8rem;
+            margin: 1.2rem 0 0.8rem;
+            line-height: 1.3;
+          }
+
+          .main-menu-card {
+            margin-bottom: 1.1rem;
           }
 
           .cards-grid {

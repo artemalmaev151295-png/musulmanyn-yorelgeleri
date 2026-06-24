@@ -443,12 +443,12 @@ export default function IslamicDiagram() {
 
       <ZCard
         arabic="اللَّهُمَّ إِنِّي أَسْأَلُكَ الْعَفْوَ وَالْعَافِيَةَ فِي الدُّنْيَا وَالآخِرَةِ، اللَّهُمَّ إِنِّي أَسْأَلُكَ الْعَفْوَ وَالْعَافِيَةَ فِي دِينِي وَدُنْيَايَ وَأَهْلِي وَمَالِي، اللَّهُمَّ اسْتُرْ عَوْرَاتِي وَآمِنْ رَوْعَاتِي، اللَّهُمَّ احْفَظْنِي مِنْ بَيْنِ يَدَيَّ وَمِنْ خَلْفِي وَعَنْ يَمِينِي وَعَنْ شِمَالِي وَمِنْ فَوْقِي، وَأَعُوذُ بِعَظَمَتِكَ أَنْ أُغْتَالَ مِنْ تَحْتِي"
-        turkmen="Eý Allahym! Senden bu dünýäde we ahyretde günämi bagyşlamagyňy hemde hemme erbetlikden goramaklygy soraýaryn. Eý Allahym! Meniň dinimi, dünýämi, maşgalami we emlägimy hemme erbetlikden gora. Eý Allahym! Meniň kemçiliklerimi ört, gorkularymdana aman et. Eý Allahym! Meni öňümden, yzymdan, sagymdan, çepimden we ýokarymdan gorap sakla. Meni aşagymdan duýdansyz gelýan heläkçilikden Öz beýikligiň bilen gora!"
+        turkmen="Eý Allahym! Senden bu dünýäde we ahyretde günämi bagyşlamagyňy hemde erbetlikden goramaklygyňy soraýaryn. Eý Allahym! Meniň dinimi, dünýämi, maşgalami we emlägimy hemme erbetlikden gora. Eý Allahym! Meniň kemçiliklerimi ört, gorkularymdan aman et. Eý Allahym! Meni öňümden, yzymdan, sagymdan, çepimden we ýokarymdan gorap sakla! Meni aşagymdan duýdansyz gelýan heläkçilikden Öz beýikligiň bilen gora!"
       />
 
       <ZCard
         arabic="اللَّهُمَّ عَالِمَ الْغَيْبِ وَالشَّهَادَةِ، فَاطِرَ السَّمَوَاتِ وَالأَرْضِ، رَبَّ كُلِّ شَيْءٍ وَمَلِيكَهُ، أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا أَنْتَ، أَعُوذُ بِكَ مِنْ شَرِّ نَفْسِي وَمِنْ شَرِّ الشَّيْطَانِ وَشِرْكِهِ، وَأَنْ أَقْتَرِفَ عَلَى نَفْسِي سُوءًا أَوْ أَجُرَّهُ إِلَى مُسْلِمٍ"
-        turkmen="Eý Allahym! Eý gizlin we äşgär zatlary biliji, Eý asmanlary we ýeri ýaradyjy, Eý her bir zadyň eýesi we patyşasy! Senden başga hak ilahiň ýokdugyna men şaýatlyk edýärin. Öz nebsimiň erbetliginden we şeýtanyň erbetliginden hem-de onuň şirk etdirmekliginden meni gora, we özüme erbetlik etmekden ýa-da musulman birine erbetlik ýetirmekden meni gora!"
+        turkmen="Eý Allahym! Eý gizlin we äşgär zatlary bilýän, Eý asmanlary we ýeri ýaradyn, Eý her bir zadyň eýesi we patyşasy! Senden başga hak ilahiň ýokdugyna men şaýatlyk edýärin. Meni öz nebsimiň şerinden, şeýtanyň şerinden, onuň şirk etdirmekliginden hem-de özüme ýa-da bir musulmana erbetlik etmekden gora!"
       />
 
       <ZCard
@@ -470,12 +470,12 @@ export default function IslamicDiagram() {
 
       <ZCard
         arabic="أَمْسَيْنَا وَأَمْسَى الْمُلْكُ لِلَّهِ رَبِّ الْعَالَمِينَ، اللَّهُمَّ إِنِّي أَسْأَلُكَ خَيْرَ هَذِهِ اللَّيْلَةِ: فَتْحَهَا وَنَصْرَهَا وَنُورَهَا وَبَرَكَتَهَا وَهُدَاهَا، وَأَعُوذُ بِكَ مِنْ شَرِّ مَا فِيهَا وَشَرِّ مَا بَعْدَهَا"
-        turkmen="Biz (Allahyň rehmeti bilen) agşama ýetdik we Älemleriň eýesi bolan Allahyň mülki dowamlydyr. Eý Allahym! Men bu agşamyň haýyrlaryny Senden soraýaryn: hem-de onuň üstünligini, ýeňşini, nuryny, bereketini we hidayatyny. Şu agşamyň içindäki we ondan soňky geljek şerlerden meni gora!"
+        turkmen="Biz agşama ýetdik we ähli mülk älemleriň eýesi bolan Allaha degişlidir. Eý Allahym! Men Senden bu agşamyň haýryny, üstünligini, ýeňşini, nuruny, bereketini we hidaýatyny soraýaryn. Şu agşamyň içindäki we ondan soňky geljek şerlerden meni gora!"
       />
 
       <ZCard
         arabic="أَمْسَيْنَا عَلَى فِطْرَةِ الإِسْلَامِ، وَعَلَى كَلِمَةِ الإِخْلَاصِ، وَعَلَى دِينِ نَبِيِّنَا مُحَمَّدٍ، وَعَلَى مِلَّةِ أَبِينَا إِبْرَاهِيمَ، حَنِيفًا مُسْلِمًا وَمَا كَانَ مِنَ الْمُشْرِكِينَ"
-        turkmen="Biz hak bolan yslam dini bilen we kelime şaýatlyk sözi bilen we Muhammed pygamberiň dini bilen we hiç bir sirk etmedik, musulman we Allany birleýji bolan Ibrahim atamyzyň dini bilen ertirledik."
+        turkmen="Biz hak bolan yslam dini bilen we kelime şaýatlyk sözi bilen we Muhammed pygamberiň dini bilen we hiç bir sirk etmedik, musulman we Allany birleýji bolan Ibrahim atamyzyň dini bilen agşama ýetdik"
       />
 
       <ZCard

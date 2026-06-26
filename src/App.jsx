@@ -101,8 +101,6 @@ export default function IslamicDiagram() {
         </div>
       </div>
 
-      <h1 className="title">Tajwid sapaklary</h1>
-
       <div
         className="ayah-card main-menu-card"
         onClick={() => navigateTo('tajwid')}

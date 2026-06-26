@@ -82,10 +82,10 @@ export default function IslamicDiagram() {
 
       <h1 className="title">Musulmanyň ilkinji bilmeli zady</h1>
 
-      <div 
-        className="ayah-card main-menu-card" 
+      <div
+        className="ayah-card main-menu-card"
         onClick={() => navigateTo('shahadah-details')}
-        style={{ 
+        style={{
           cursor: 'pointer',
           background: 'linear-gradient(135deg, rgba(139, 90, 43, 0.2) 0%, rgba(76, 49, 23, 0.2) 100%)',
           borderColor: 'rgba(212, 175, 122, 0.4)'
@@ -97,6 +97,26 @@ export default function IslamicDiagram() {
           </p>
           <p className="translation" style={{ fontSize: '1.1rem', lineHeight: '1.8' }}>
             Men şaýatlyk edýärin: Alladan başga ybadada hakly ilahiň ýokdygyňa we Muhammet ﷺ Allanyň guly hem resulydygyňa.
+          </p>
+        </div>
+      </div>
+
+      <h1 className="title">Tajwid sapaklary</h1>
+
+      <div
+        className="ayah-card main-menu-card"
+        onClick={() => navigateTo('tajwid')}
+        style={{
+          cursor: 'pointer',
+          background: 'linear-gradient(135deg, rgba(139, 90, 43, 0.2) 0%, rgba(76, 49, 23, 0.2) 100%)',
+          borderColor: 'rgba(212, 175, 122, 0.4)',
+          justifyContent: 'center',
+          minHeight: 'unset'
+        }}
+      >
+        <div className="ayah-content" style={{ width: '100%', textAlign: 'center', padding: '0.45rem 1rem' }}>
+          <p style={{ color: '#f4e4c1', fontSize: '1.35rem', fontWeight: '700', lineHeight: '1.35' }}>
+            Tajwid sapaklary
           </p>
         </div>
       </div>
@@ -749,6 +769,31 @@ export default function IslamicDiagram() {
     </div>
   );
 
+  const TajwidLevel = () => (
+    <div className="level-container">
+      <h2 className="surah-title">Tajwid sapaklary</h2>
+
+      <div style={{
+        background: 'linear-gradient(135deg, rgba(139, 90, 43, 0.15) 0%, rgba(76, 49, 23, 0.15) 100%)',
+        border: '2px solid rgba(212, 175, 122, 0.3)',
+        borderRadius: '14px',
+        padding: '1.5rem',
+        backdropFilter: 'blur(10px)'
+      }}>
+        <p style={{ color: '#f4e4c1', fontSize: '1.2rem', fontWeight: '600', marginBottom: '1.2rem', textAlign: 'center' }}>
+          1-nji ders
+        </p>
+        <iframe
+          src="https://player.cloudinary.com/embed/?cloud_name=dv9zimdzx&public_id=1-nji-ders_kunpgn"
+          width="100%"
+          height="400"
+          style={{ borderRadius: '12px', border: 'none', display: 'block' }}
+          allowFullScreen
+        />
+      </div>
+    </div>
+  );
+
   return (
     <div className="app">
       <style>{`
@@ -1187,6 +1232,7 @@ export default function IslamicDiagram() {
       {currentLevel === 'ayah-3' && <Ayah3Detail />}
       {currentLevel === 'ayah-5' && <Ayah5Detail />}
       {currentLevel === 'ayah-4' && <Ayah4Detail />}
+      {currentLevel === 'tajwid' && <TajwidLevel />}
     </div>
   );
 }

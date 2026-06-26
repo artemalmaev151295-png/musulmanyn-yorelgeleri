@@ -96,7 +96,7 @@ export default function IslamicDiagram() {
             أَشْهَدُ أَنْ لَا إِلٰهَ إِلَّا اللَّهُ وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ
           </p>
           <p className="translation" style={{ fontSize: '1.1rem', lineHeight: '1.8' }}>
-            Men şaýatlyk edýärin: Alladan başga ybadada hakly ilahiň ýokdygyňa we Muhammet ﷺ Allanyň guly hem resulydygyňa.
+            Men şaýatlyk edýärin: Alladan başga ybadada hakly ilahiň ýokdygyna we Muhammet ﷺ Allanyň guly hem resulydygyna.
           </p>
         </div>
       </div>

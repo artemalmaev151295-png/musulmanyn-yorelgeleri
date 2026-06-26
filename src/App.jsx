@@ -21,23 +21,20 @@ export default function IslamicDiagram() {
 
   const MainLevel = () => (
     <div className="level-container">
-      <h1 className="title">Musulmanyň ilkinji bilmeli zady</h1>
-
       <div
         className="ayah-card main-menu-card"
         onClick={() => navigateTo('shahadah-details')}
         style={{
           cursor: 'pointer',
           background: 'linear-gradient(135deg, rgba(139, 90, 43, 0.2) 0%, rgba(76, 49, 23, 0.2) 100%)',
-          borderColor: 'rgba(212, 175, 122, 0.4)'
+          borderColor: 'rgba(212, 175, 122, 0.4)',
+          justifyContent: 'center',
+          minHeight: 'unset'
         }}
       >
-        <div className="ayah-content" style={{ width: '100%' }}>
-          <p className="arabic" style={{ fontSize: '1.8rem', marginBottom: '1.5rem' }}>
-            أَشْهَدُ أَنْ لَا إِلٰهَ إِلَّا اللَّهُ وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ
-          </p>
-          <p className="translation" style={{ fontSize: '1.1rem', lineHeight: '1.8' }}>
-            Men şaýatlyk edýärin: Alladan başga ybadada hakly ilahiň ýokdygyna we Muhammet ﷺ Allanyň guly hem resulydygyna.
+        <div className="ayah-content" style={{ width: '100%', textAlign: 'center', padding: '0.45rem 1rem' }}>
+          <p style={{ color: '#f4e4c1', fontSize: '1.35rem', fontWeight: '700', lineHeight: '1.35' }}>
+            Musulmanyň ilkinji bilmeli zady
           </p>
         </div>
       </div>
@@ -52,15 +49,7 @@ export default function IslamicDiagram() {
           justifyContent: 'center',
           minHeight: 'unset'
         }}
-      >
-        <div className="ayah-content" style={{ width: '100%', textAlign: 'center', padding: '0.45rem 1rem' }}>
-          <p style={{ color: '#f4e4c1', fontSize: '1.35rem', fontWeight: '700', lineHeight: '1.35' }}>
-            Irdenki we Agşamky
-            <br />
-            zikirler we dogalar
-          </p>
-        </div>
-      </div>
+      />
 
       <div
         className="ayah-card main-menu-card"
@@ -120,6 +109,23 @@ export default function IslamicDiagram() {
   const ShahadahDetailsLevel = () => (
     <div className="level-container">
       <h2 className="surah-title">Şaýatlyk sözleriniň içine alýan zatlary</h2>
+
+      <div style={{
+        background: 'linear-gradient(135deg, rgba(139, 90, 43, 0.12) 0%, rgba(76, 49, 23, 0.12) 100%)',
+        border: '2px solid rgba(212, 175, 122, 0.25)',
+        borderRadius: '14px',
+        padding: '1.5rem',
+        marginBottom: '1.5rem',
+        textAlign: 'center',
+        backdropFilter: 'blur(10px)'
+      }}>
+        <p className="arabic" style={{ fontSize: '1.3rem', marginBottom: '1rem' }}>
+          أَشْهَدُ أَنْ لَا إِلٰهَ إِلَّا اللَّهُ وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ
+        </p>
+        <p className="translation" style={{ fontSize: '0.95rem', lineHeight: '1.7' }}>
+          Men şaýatlyk edýärin: Alladan başga ybadada hakly ilahiň ýokdygyna we Muhammet ﷺ Allanyň guly hem resulydygyna.
+        </p>
+      </div>
 
       {/* First Block - La ilaha illa Allah - NO EMOJI */}
       <div className="definition-box" style={{ marginBottom: '1.5rem' }}>

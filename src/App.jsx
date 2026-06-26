@@ -767,30 +767,43 @@ export default function IslamicDiagram() {
     </div>
   );
 
-  const TajwidLevel = () => (
-    <div className="level-container">
-      <h2 className="surah-title">Tajwid sapaklary</h2>
+  const TajwidLevel = () => {
+    const lessons = [
+      { title: '1-nji ders', src: 'https://player.cloudinary.com/embed/?cloud_name=dv9zimdzx&public_id=1-nji-ders_kunpgn' },
+      { title: '2-nji ders', src: 'https://player.cloudinary.com/embed/?cloud_name=dv9zimdzx&public_id=2-nji-ders_escmlb' },
+      { title: '3-nji ders', src: 'https://player.cloudinary.com/embed/?cloud_name=dv9zimdzx&public_id=3-nji_ders_rv9934' },
+      { title: '4-nji ders', src: 'https://player.cloudinary.com/embed/?cloud_name=dv9zimdzx&public_id=4-nji_ders_e3fxuc' },
+    ];
 
-      <div style={{
-        background: 'linear-gradient(135deg, rgba(139, 90, 43, 0.15) 0%, rgba(76, 49, 23, 0.15) 100%)',
-        border: '2px solid rgba(212, 175, 122, 0.3)',
-        borderRadius: '14px',
-        padding: '1.5rem',
-        backdropFilter: 'blur(10px)'
-      }}>
-        <p style={{ color: '#f4e4c1', fontSize: '1.2rem', fontWeight: '600', marginBottom: '1.2rem', textAlign: 'center' }}>
-          1-nji ders
-        </p>
-        <iframe
-          src="https://player.cloudinary.com/embed/?cloud_name=dv9zimdzx&public_id=1-nji-ders_kunpgn"
-          width="100%"
-          height="400"
-          style={{ borderRadius: '12px', border: 'none', display: 'block' }}
-          allowFullScreen
-        />
+    return (
+      <div className="level-container">
+        <h2 className="surah-title">Tajwid sapaklary</h2>
+
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+          {lessons.map((lesson) => (
+            <div key={lesson.title} style={{
+              background: 'linear-gradient(135deg, rgba(139, 90, 43, 0.15) 0%, rgba(76, 49, 23, 0.15) 100%)',
+              border: '2px solid rgba(212, 175, 122, 0.3)',
+              borderRadius: '14px',
+              padding: '1.5rem',
+              backdropFilter: 'blur(10px)'
+            }}>
+              <p style={{ color: '#f4e4c1', fontSize: '1.2rem', fontWeight: '600', marginBottom: '1.2rem', textAlign: 'center' }}>
+                {lesson.title}
+              </p>
+              <iframe
+                src={lesson.src}
+                width="100%"
+                height="400"
+                style={{ borderRadius: '12px', border: 'none', display: 'block' }}
+                allowFullScreen
+              />
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
-  );
+    );
+  };
 
   return (
     <div className="app">

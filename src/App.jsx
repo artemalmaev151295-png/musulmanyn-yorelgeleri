@@ -21,7 +21,26 @@ export default function IslamicDiagram() {
 
   const MainLevel = () => (
     <div className="level-container">
-      <h1 className="title">Irdenki we gijeki zikirler we dogalar</h1>
+      <h1 className="title">Musulmanyň ilkinji bilmeli zady</h1>
+
+      <div
+        className="ayah-card main-menu-card"
+        onClick={() => navigateTo('shahadah-details')}
+        style={{
+          cursor: 'pointer',
+          background: 'linear-gradient(135deg, rgba(139, 90, 43, 0.2) 0%, rgba(76, 49, 23, 0.2) 100%)',
+          borderColor: 'rgba(212, 175, 122, 0.4)'
+        }}
+      >
+        <div className="ayah-content" style={{ width: '100%' }}>
+          <p className="arabic" style={{ fontSize: '1.8rem', marginBottom: '1.5rem' }}>
+            أَشْهَدُ أَنْ لَا إِلٰهَ إِلَّا اللَّهُ وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ
+          </p>
+          <p className="translation" style={{ fontSize: '1.1rem', lineHeight: '1.8' }}>
+            Men şaýatlyk edýärin: Alladan başga ybadada hakly ilahiň ýokdygyna we Muhammet ﷺ Allanyň guly hem resulydygyna.
+          </p>
+        </div>
+      </div>
 
       <div
         className="ayah-card main-menu-card"
@@ -43,8 +62,6 @@ export default function IslamicDiagram() {
         </div>
       </div>
 
-      <h1 className="title">Musulmanyň esasy ýaşaýyş ýörelgeleri we düzgünleri</h1>
-      
       <div
         className="ayah-card main-menu-card"
         onClick={() => navigateTo('surah')}
@@ -77,27 +94,6 @@ export default function IslamicDiagram() {
               {item.icon} {item.title}
             </span>
           ))}
-        </div>
-      </div>
-
-      <h1 className="title">Musulmanyň ilkinji bilmeli zady</h1>
-
-      <div
-        className="ayah-card main-menu-card"
-        onClick={() => navigateTo('shahadah-details')}
-        style={{
-          cursor: 'pointer',
-          background: 'linear-gradient(135deg, rgba(139, 90, 43, 0.2) 0%, rgba(76, 49, 23, 0.2) 100%)',
-          borderColor: 'rgba(212, 175, 122, 0.4)'
-        }}
-      >
-        <div className="ayah-content" style={{ width: '100%' }}>
-          <p className="arabic" style={{ fontSize: '1.8rem', marginBottom: '1.5rem' }}>
-            أَشْهَدُ أَنْ لَا إِلٰهَ إِلَّا اللَّهُ وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ
-          </p>
-          <p className="translation" style={{ fontSize: '1.1rem', lineHeight: '1.8' }}>
-            Men şaýatlyk edýärin: Alladan başga ybadada hakly ilahiň ýokdygyna we Muhammet ﷺ Allanyň guly hem resulydygyna.
-          </p>
         </div>
       </div>
 

@@ -32,8 +32,8 @@ export default function IslamicDiagram() {
           minHeight: 'unset'
         }}
       >
-        <div className="ayah-content" style={{ width: '100%', textAlign: 'center', padding: '0.45rem 1rem' }}>
-          <p style={{ color: '#f4e4c1', fontSize: '1.35rem', fontWeight: '700', lineHeight: '1.35' }}>
+        <div className="ayah-content" style={{ width: '100%', textAlign: 'left', padding: '0.3rem 0.5rem' }}>
+          <p style={{ color: '#f4e4c1', fontSize: '1.1rem', fontWeight: '700', lineHeight: '1.3' }}>
             Musulmanyň ilkinji bilmeli zady
           </p>
         </div>
@@ -49,7 +49,15 @@ export default function IslamicDiagram() {
           justifyContent: 'center',
           minHeight: 'unset'
         }}
-      />
+      >
+        <div className="ayah-content" style={{ width: '100%', textAlign: 'center', padding: '0.45rem 1rem' }}>
+          <p style={{ color: '#f4e4c1', fontSize: '1.35rem', fontWeight: '700', lineHeight: '1.35' }}>
+            Irdenki we Agşamky
+            <br />
+            zikirler we dogalar
+          </p>
+        </div>
+      </div>
 
       <div
         className="ayah-card main-menu-card"
@@ -127,135 +135,67 @@ export default function IslamicDiagram() {
         </p>
       </div>
 
-      {/* First Block - La ilaha illa Allah - NO EMOJI */}
-      <div className="definition-box" style={{ marginBottom: '1.5rem' }}>
-        <div className="info-box" style={{ marginBottom: '1rem', background: 'linear-gradient(135deg, rgba(139, 90, 43, 0.12) 0%, rgba(76, 49, 23, 0.12) 100%)', border: '2px solid rgba(212, 175, 122, 0.25)' }}>
+      {/* First Block - La ilaha illa Allah */}
+      <div className="definition-box" style={{ marginBottom: '1rem', padding: '1.2rem' }}>
+        <div className="info-box" style={{ marginBottom: '0.8rem', padding: '1rem', background: 'linear-gradient(135deg, rgba(139, 90, 43, 0.12) 0%, rgba(76, 49, 23, 0.12) 100%)', border: '2px solid rgba(212, 175, 122, 0.25)' }}>
           <div className="info-content" style={{ width: '100%' }}>
-            <p style={{ fontSize: '1.15rem', color: '#f4e4c1' }}>
+            <p style={{ fontSize: '1rem', color: '#f4e4c1' }}>
               <strong>LÂ ILÂHA ILLA ALLAH</strong> şaýatlygy öz içine 2 zady alýar:
             </p>
           </div>
         </div>
 
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-          <div style={{
-            padding: '1.2rem',
-            background: 'rgba(0, 0, 0, 0.15)',
-            borderRadius: '10px',
-            borderLeft: '4px solid #d4af7a'
-          }}>
-            <div style={{ display: 'flex', alignItems: 'start', gap: '1rem' }}>
-              <div style={{
-                minWidth: '30px',
-                height: '30px',
-                background: 'linear-gradient(135deg, #8b5a2b 0%, #5e3a1a 100%)',
-                color: '#f4e4c1',
-                borderRadius: '50%',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                fontSize: '1rem',
-                fontWeight: '700',
-                flexShrink: 0
-              }}>1</div>
-              <p style={{ color: '#c9b991', fontSize: '1.05rem', margin: 0 }}>
-                <strong style={{ color: '#f4e4c1' }}>Ähli ilahleriň ybadada mynasypdygyny inkär etmek</strong>
-              </p>
-            </div>
-          </div>
-
-          <div style={{
-            padding: '1.2rem',
-            background: 'rgba(0, 0, 0, 0.15)',
-            borderRadius: '10px',
-            borderLeft: '4px solid #d4af7a'
-          }}>
-            <div style={{ display: 'flex', alignItems: 'start', gap: '1rem' }}>
-              <div style={{
-                minWidth: '30px',
-                height: '30px',
-                background: 'linear-gradient(135deg, #8b5a2b 0%, #5e3a1a 100%)',
-                color: '#f4e4c1',
-                borderRadius: '50%',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                fontSize: '1rem',
-                fontWeight: '700',
-                flexShrink: 0
-              }}>2</div>
-              <p style={{ color: '#c9b991', fontSize: '1.05rem', margin: 0 }}>
-                <strong style={{ color: '#f4e4c1' }}>Ýeke-täk Allanyň ybadada mynasyp ilahdygini tassyk etmek</strong>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Second Block - Muhammadan abduhu wa rasuluhu - NO EMOJI */}
-      <div className="definition-box" style={{ marginBottom: '1.5rem' }}>
-        <div className="info-box" style={{ marginBottom: '1rem', background: 'linear-gradient(135deg, rgba(139, 90, 43, 0.12) 0%, rgba(76, 49, 23, 0.12) 100%)', border: '2px solid rgba(212, 175, 122, 0.25)' }}>
-          <div className="info-content" style={{ width: '100%' }}>
-            <p style={{ fontSize: '1.15rem', color: '#f4e4c1' }}>
-              <strong>MUHAMMADAN 'ABDUHU WA RASÛLUH</strong> şaýatlygy öz içine 4 zady alýar:
-            </p>
-          </div>
-        </div>
-
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '0.7rem' }}>
           {[
-            'Pygamberiň ﷺ habar beren zatlaryna ynanmak',
-            'Onuň buýruklaryny ýerine ýetirmek',
-            'Onuň gadagan eden zatlaryndan gaça durmak',
-            'Allaha diňe Onuň görkezişi ýaly ybadat etmek'
-          ].map((item, idx) => (
-            <div key={idx} style={{
-              padding: '1rem',
-              background: 'rgba(0, 0, 0, 0.15)',
-              borderRadius: '10px',
-              borderLeft: '4px solid #d4af7a'
-            }}>
-              <div style={{ display: 'flex', alignItems: 'start', gap: '1rem' }}>
-                <div style={{
-                  minWidth: '30px',
-                  height: '30px',
-                  background: 'linear-gradient(135deg, #8b5a2b 0%, #5e3a1a 100%)',
-                  color: '#f4e4c1',
-                  borderRadius: '50%',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  fontSize: '1rem',
-                  fontWeight: '700',
-                  flexShrink: 0
-                }}>{idx + 1}</div>
-                <p style={{ color: '#c9b991', fontSize: '1.05rem', margin: 0 }}>{item}</p>
+            <><strong style={{ color: '#f4e4c1' }}>Ähli ilahleriň ybadada mynasypdygyny inkär etmek</strong></>,
+            <><strong style={{ color: '#f4e4c1' }}>Ýeke-täk Allanyň ybadada mynasyp ilahdygini tassyk etmek</strong></>
+          ].map((text, idx) => (
+            <div key={idx} style={{ padding: '0.8rem', background: 'rgba(0,0,0,0.15)', borderRadius: '10px', borderLeft: '4px solid #d4af7a' }}>
+              <div style={{ display: 'flex', alignItems: 'start', gap: '0.8rem' }}>
+                <div style={{ minWidth: '26px', height: '26px', background: 'linear-gradient(135deg, #8b5a2b 0%, #5e3a1a 100%)', color: '#f4e4c1', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.9rem', fontWeight: '700', flexShrink: 0 }}>{idx + 1}</div>
+                <p style={{ color: '#c9b991', fontSize: '0.95rem', margin: 0 }}>{text}</p>
               </div>
             </div>
           ))}
         </div>
       </div>
 
-      {/* Third Block - Definitions - SIMPLE BULLET LIST */}
-      <div className="definition-box">
-        <h3 className="definition-title">Kesgitlemeler</h3>
-        
-        <div style={{ paddingLeft: '1rem', color: '#c9b991', fontSize: '1.05rem', lineHeight: '1.8' }}>
-          <p style={{ marginBottom: '0.8rem' }}>
-            • Ilah diýmek — islendik ybadat edilýän zatdyr.
-          </p>
-          <p style={{ marginBottom: '0.8rem' }}>
-            • Allah diýmek — ybadada hakly ýeke-täk Ilah diýmekdir.
-          </p>
-          <p style={{ marginBottom: '0.8rem' }}>
-            • Ybadat diýmek — Alla Tagallanyň gowy görýän islendik amal diýmekdir.
-          </p>
-          <p style={{ marginBottom: '0.8rem' }}>
-            • Gul diýmek - 1) boýun edilen 2) bolýun bolýan
-          </p>
-          <p>
-            • Resul — bu Allah tarapyndan wahy berlen we adamlara ýetirmek üçin iberilen ilçisidir.
-          </p>
+      {/* Second Block - Muhammadan abduhu wa rasuluhu */}
+      <div className="definition-box" style={{ marginBottom: '1rem', padding: '1.2rem' }}>
+        <div className="info-box" style={{ marginBottom: '0.8rem', padding: '1rem', background: 'linear-gradient(135deg, rgba(139, 90, 43, 0.12) 0%, rgba(76, 49, 23, 0.12) 100%)', border: '2px solid rgba(212, 175, 122, 0.25)' }}>
+          <div className="info-content" style={{ width: '100%' }}>
+            <p style={{ fontSize: '1rem', color: '#f4e4c1' }}>
+              <strong>MUHAMMADAN 'ABDUHU WA RASÛLUH</strong> şaýatlygy öz içine 4 zady alýar:
+            </p>
+          </div>
+        </div>
+
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem' }}>
+          {[
+            'Pygamberiň ﷺ habar beren zatlaryna ynanmak',
+            'Onuň buýruklaryny ýerine ýetirmek',
+            'Onuň gadagan eden zatlaryndan gaça durmak',
+            'Allaha diňe Onuň görkezişi ýaly ybadat etmek'
+          ].map((item, idx) => (
+            <div key={idx} style={{ padding: '0.8rem', background: 'rgba(0,0,0,0.15)', borderRadius: '10px', borderLeft: '4px solid #d4af7a' }}>
+              <div style={{ display: 'flex', alignItems: 'start', gap: '0.8rem' }}>
+                <div style={{ minWidth: '26px', height: '26px', background: 'linear-gradient(135deg, #8b5a2b 0%, #5e3a1a 100%)', color: '#f4e4c1', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.9rem', fontWeight: '700', flexShrink: 0 }}>{idx + 1}</div>
+                <p style={{ color: '#c9b991', fontSize: '0.95rem', margin: 0 }}>{item}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Third Block - Definitions */}
+      <div className="definition-box" style={{ padding: '1.2rem' }}>
+        <h3 className="definition-title" style={{ fontSize: '1.1rem' }}>Kesgitlemeler</h3>
+        <div style={{ paddingLeft: '0.8rem', color: '#c9b991', fontSize: '0.9rem', lineHeight: '1.7' }}>
+          <p style={{ marginBottom: '0.6rem' }}>• Ilah diýmek — islendik ybadat edilýän zatdyr.</p>
+          <p style={{ marginBottom: '0.6rem' }}>• Allah diýmek — ybadada hakly ýeke-täk Ilah diýmekdir.</p>
+          <p style={{ marginBottom: '0.6rem' }}>• Ybadat diýmek — Alla Tagallanyň gowy görýän islendik amal diýmekdir.</p>
+          <p style={{ marginBottom: '0.6rem' }}>• Gul diýmek - 1) boýun edilen 2) bolýun bolýan</p>
+          <p>• Resul — bu Allah tarapyndan wahy berlen we adamlara ýetirmek üçin iberilen ilçisidir.</p>
         </div>
       </div>
     </div>
@@ -263,8 +203,6 @@ export default function IslamicDiagram() {
 
   const ZikirMenuLevel = () => (
     <div className="level-container">
-      <h2 className="surah-title">Irdenki we gijeki zikirler we dogalar</h2>
-
       <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
         <div className="ayah-card" onClick={() => navigateTo('irdenky')} style={{ cursor: 'pointer' }}>
           <div className="ayah-content" style={{ width: '100%', textAlign: 'center', padding: '1rem' }}>

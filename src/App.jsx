@@ -30,12 +30,16 @@ export default function IslamicDiagram() {
           cursor: 'pointer',
           background: 'linear-gradient(135deg, rgba(139, 90, 43, 0.2) 0%, rgba(76, 49, 23, 0.2) 100%)',
           borderColor: 'rgba(212, 175, 122, 0.4)',
-          justifyContent: 'center'
+          justifyContent: 'center',
+          minHeight: 'unset'
         }}
       >
-        <div className="ayah-content" style={{ width: '100%', textAlign: 'center', padding: '0.75rem' }}>
-          <p style={{ fontSize: '2rem', marginBottom: '0.6rem' }}>🌅🌙</p>
-          <p style={{ color: '#f4e4c1', fontSize: '1.2rem', fontWeight: '600' }}>Irdenki we agşamky zikirler we dogalar</p>
+        <div className="ayah-content" style={{ width: '100%', textAlign: 'center', padding: '0.45rem 1rem' }}>
+          <p style={{ color: '#f4e4c1', fontSize: '1.35rem', fontWeight: '700', lineHeight: '1.35' }}>
+            Irdenki we Agşamky
+            <br />
+            zikirler we dogalar
+          </p>
         </div>
       </div>
 
@@ -480,7 +484,7 @@ export default function IslamicDiagram() {
 
       <ZCard
         arabic="سُبْحَانَ اللَّهِ وَبِحَمْدِهِ"
-        turkmen="Allah kemsizdirdir we ol öwgülere mynasypdyr."
+        turkmen="Allah kemsizdir we ol öwgülere mynasypdyr."
         times="100 gezek okalýar"
       />
 

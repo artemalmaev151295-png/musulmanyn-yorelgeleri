@@ -67,29 +67,25 @@ export default function IslamicDiagram() {
           background: 'linear-gradient(135deg, rgba(139, 90, 43, 0.2) 0%, rgba(76, 49, 23, 0.2) 100%)',
           borderColor: 'rgba(212, 175, 122, 0.4)',
           flexDirection: 'column',
-          padding: '2rem'
+          padding: '1.2rem'
         }}
       >
-        <p style={{ color: '#f4e4c1', fontSize: '1.3rem', fontWeight: '600', marginBottom: '1.2rem', textAlign: 'center' }}>
+        <p style={{ color: '#f4e4c1', fontSize: '1.3rem', fontWeight: '600', marginBottom: '1rem', textAlign: 'center' }}>
           Musulmanyň esasy ýaşaýyş ýörelgeleri we düzgünleri
         </p>
-        <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', justifyContent: 'center' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem', width: '100%' }}>
           {[
-            { title: 'Ylym almak', icon: '📚' },
-            { title: 'Amal etmek', icon: '🤲' },
-            { title: 'Çagyrmak', icon: '📢' },
-            { title: 'Sabyr etmek', icon: '💎' }
+            'Ylym almak',
+            'Amal etmek',
+            'Çagyrmak',
+            'Sabyr etmek'
           ].map((item, idx) => (
-            <span key={idx} style={{
-              color: '#c9b991',
-              fontSize: '1rem',
-              padding: '0.4rem 0.8rem',
-              border: '1px solid rgba(212, 175, 122, 0.3)',
-              borderRadius: '20px',
-              background: 'rgba(0,0,0,0.15)'
-            }}>
-              {item.icon} {item.title}
-            </span>
+            <div key={idx} style={{ padding: '0.8rem', background: 'rgba(0,0,0,0.15)', borderRadius: '10px', borderLeft: '4px solid #d4af7a' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.8rem' }}>
+                <div style={{ minWidth: '26px', height: '26px', background: 'linear-gradient(135deg, #8b5a2b 0%, #5e3a1a 100%)', color: '#f4e4c1', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.9rem', fontWeight: '700', flexShrink: 0 }}>{idx + 1}</div>
+                <p style={{ color: '#c9b991', fontSize: '1rem', margin: 0 }}>{item}</p>
+              </div>
+            </div>
           ))}
         </div>
       </div>
@@ -190,12 +186,21 @@ export default function IslamicDiagram() {
       {/* Third Block - Definitions */}
       <div className="definition-box" style={{ padding: '1.2rem' }}>
         <h3 className="definition-title" style={{ fontSize: '1.1rem' }}>Kesgitlemeler</h3>
-        <div style={{ paddingLeft: '0.8rem', color: '#c9b991', fontSize: '0.9rem', lineHeight: '1.7' }}>
-          <p style={{ marginBottom: '0.6rem' }}>• Ilah diýmek — islendik ybadat edilýän zatdyr.</p>
-          <p style={{ marginBottom: '0.6rem' }}>• Allah diýmek — ybadada hakly ýeke-täk Ilah diýmekdir.</p>
-          <p style={{ marginBottom: '0.6rem' }}>• Ybadat diýmek — Alla Tagallanyň gowy görýän islendik amal diýmekdir.</p>
-          <p style={{ marginBottom: '0.6rem' }}>• Gul diýmek - 1) boýun edilen 2) bolýun bolýan</p>
-          <p>• Resul — bu Allah tarapyndan wahy berlen we adamlara ýetirmek üçin iberilen ilçisidir.</p>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem' }}>
+          {[
+            'Ilah diýmek — islendik ybadat edilýän zatdyr.',
+            'Allah diýmek — ybadada hakly ýeke-täk Ilah diýmekdir.',
+            'Ybadat diýmek — Alla Tagallanyň gowy görýän islendik amal diýmekdir.',
+            'Gul diýmek - 1) boýun edilen 2) bolýun bolýan',
+            'Resul — bu Allah tarapyndan wahy berlen we adamlara ýetirmek üçin iberilen ilçisidir.'
+          ].map((item, idx) => (
+            <div key={idx} style={{ padding: '0.8rem', background: 'rgba(0,0,0,0.15)', borderRadius: '10px', borderLeft: '4px solid #d4af7a' }}>
+              <div style={{ display: 'flex', alignItems: 'start', gap: '0.8rem' }}>
+                <div style={{ minWidth: '26px', height: '26px', background: 'linear-gradient(135deg, #8b5a2b 0%, #5e3a1a 100%)', color: '#f4e4c1', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.9rem', fontWeight: '700', flexShrink: 0 }}>{idx + 1}</div>
+                <p style={{ color: '#c9b991', fontSize: '0.95rem', margin: 0 }}>{item}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>

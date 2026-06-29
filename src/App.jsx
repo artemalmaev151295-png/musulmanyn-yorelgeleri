@@ -779,11 +779,12 @@ export default function IslamicDiagram() {
           {videoLessons.map((lesson) => (
             <div key={lesson.title} style={cardStyle}>
               <p style={titleStyle}>{lesson.title}</p>
-              <video
+              <iframe
                 src={lesson.src}
-                controls
                 width="100%"
-                style={{ borderRadius: '12px', display: 'block' }}
+                height="400"
+                style={{ borderRadius: '12px', border: 'none', display: 'block' }}
+                allowFullScreen
               />
             </div>
           ))}

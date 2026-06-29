@@ -713,35 +713,77 @@ export default function IslamicDiagram() {
   );
 
   const TajwidLevel = () => {
-    const lessons = [
+    const iframeLessons = [
       { title: '1-nji ders', src: 'https://player.cloudinary.com/embed/?cloud_name=dv9zimdzx&public_id=1-nji-ders_kunpgn' },
       { title: '2-nji ders', src: 'https://player.cloudinary.com/embed/?cloud_name=dv9zimdzx&public_id=2-nji-ders_escmlb' },
       { title: '3-nji ders', src: 'https://player.cloudinary.com/embed/?cloud_name=dv9zimdzx&public_id=3-nji_ders_rv9934' },
       { title: '4-nji ders', src: 'https://player.cloudinary.com/embed/?cloud_name=dv9zimdzx&public_id=4-nji_ders_e3fxuc' },
     ];
 
+    const videoLessons = [
+      { title: '5-nji ders',  src: 'https://res.cloudinary.com/dv9zimdzx/video/upload/v1782553248/5-nji_ders_affhzn.mp4' },
+      { title: '6-nji ders',  src: 'https://res.cloudinary.com/dv9zimdzx/video/upload/v1782553250/6-nji_ders_hy6bud.mp4' },
+      { title: '7-nji ders',  src: 'https://res.cloudinary.com/dv9zimdzx/video/upload/v1782553248/7-nji_ders_aksgnk.mp4' },
+      { title: '8-nji ders',  src: 'https://res.cloudinary.com/dv9zimdzx/video/upload/v1782553244/8-nji_ders_ly7ree.mp4' },
+      { title: '9-nji ders',  src: 'https://res.cloudinary.com/dv9zimdzx/video/upload/v1782685860/9-nji_ders_ohsngz.mp4' },
+      { title: '10-nji ders', src: 'https://res.cloudinary.com/dv9zimdzx/video/upload/v1782685917/10_-nji_ders_wyokik.mp4' },
+      { title: '11-nji ders', src: 'https://res.cloudinary.com/dv9zimdzx/video/upload/v1782685875/11-nji_ders_caf4sx.mp4' },
+      { title: '12-nji ders', src: 'https://res.cloudinary.com/dv9zimdzx/video/upload/v1782685839/12-nji_ders_asbjaw.mp4' },
+      { title: '13-nji ders', src: 'https://res.cloudinary.com/dv9zimdzx/video/upload/v1782685833/13-nji_ders_ygd4rn.mp4' },
+      { title: '14-nji sapak', src: 'https://res.cloudinary.com/dv9zimdzx/video/upload/v1782686044/14-njy_sapak_s1hsuk.mp4' },
+      { title: '15-nji sapak', src: 'https://res.cloudinary.com/dv9zimdzx/video/upload/v1782685822/15-nji_sapak_k4zwev.mp4' },
+      { title: '16-nji sapak', src: 'https://res.cloudinary.com/dv9zimdzx/video/upload/v1782685852/16-nji_sapak_bmkx9d.mp4' },
+      { title: '17-nji sapak', src: 'https://res.cloudinary.com/dv9zimdzx/video/upload/v1782685862/17-njy_sapak_u8dwas.mp4' },
+      { title: '18-nji sapak', src: 'https://res.cloudinary.com/dv9zimdzx/video/upload/v1782685886/18-nji_sapak_udi5pf.mp4' },
+      { title: '19-nji sapak', src: 'https://res.cloudinary.com/dv9zimdzx/video/upload/v1782685854/19-njy_sapak_aynuhp.mp4' },
+      { title: '20-nji sapak', src: 'https://res.cloudinary.com/dv9zimdzx/video/upload/v1782685934/20-nji_sapak_hzcx20.mp4' },
+      { title: '21-nji sapak', src: 'https://res.cloudinary.com/dv9zimdzx/video/upload/v1782685857/21-nji_sapak_cmsdo5.mp4' },
+      { title: '22-nji sapak', src: 'https://res.cloudinary.com/dv9zimdzx/video/upload/v1782685829/22-nji_sapak_x1umkz.mp4' },
+      { title: '23-nji sapak', src: 'https://res.cloudinary.com/dv9zimdzx/video/upload/v1782686848/23-nji_sapak_tddlbb.mp4' },
+      { title: '24-nji sapak', src: 'https://res.cloudinary.com/dv9zimdzx/video/upload/v1782686852/24-nji_sapak_t3wmju.mp4' },
+      { title: '25-nji sapak', src: 'https://res.cloudinary.com/dv9zimdzx/video/upload/v1782686859/25-nji_sapak_dkcstt.mp4' },
+      { title: '26-nji sapak', src: 'https://res.cloudinary.com/dv9zimdzx/video/upload/v1782686879/26-nji_sapak_nxuag7.mp4' },
+      { title: '27-nji sapak', src: 'https://res.cloudinary.com/dv9zimdzx/video/upload/v1782725102/27-njy_sapak_aiqycp.mp4' },
+      { title: '28-nji sapak', src: 'https://res.cloudinary.com/dv9zimdzx/video/upload/v1782725103/28-nji_sapak_zcgriy.mp4' },
+      { title: '29-nji sapak', src: 'https://res.cloudinary.com/dv9zimdzx/video/upload/v1782726215/29-njy_sapak_ljfbdj.mp4' },
+      { title: '30-nji sapak', src: 'https://res.cloudinary.com/dv9zimdzx/video/upload/v1782725101/30-nji_sapak_t4nlqv.mp4' },
+    ];
+
+    const cardStyle = {
+      background: 'linear-gradient(135deg, rgba(139, 90, 43, 0.15) 0%, rgba(76, 49, 23, 0.15) 100%)',
+      border: '2px solid rgba(212, 175, 122, 0.3)',
+      borderRadius: '14px',
+      padding: '1.5rem',
+      backdropFilter: 'blur(10px)'
+    };
+
+    const titleStyle = { color: '#f4e4c1', fontSize: '1.2rem', fontWeight: '600', marginBottom: '1.2rem', textAlign: 'center' };
+
     return (
       <div className="level-container">
         <h2 className="surah-title">Tajwid sapaklary</h2>
 
         <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-          {lessons.map((lesson) => (
-            <div key={lesson.title} style={{
-              background: 'linear-gradient(135deg, rgba(139, 90, 43, 0.15) 0%, rgba(76, 49, 23, 0.15) 100%)',
-              border: '2px solid rgba(212, 175, 122, 0.3)',
-              borderRadius: '14px',
-              padding: '1.5rem',
-              backdropFilter: 'blur(10px)'
-            }}>
-              <p style={{ color: '#f4e4c1', fontSize: '1.2rem', fontWeight: '600', marginBottom: '1.2rem', textAlign: 'center' }}>
-                {lesson.title}
-              </p>
+          {iframeLessons.map((lesson) => (
+            <div key={lesson.title} style={cardStyle}>
+              <p style={titleStyle}>{lesson.title}</p>
               <iframe
                 src={lesson.src}
                 width="100%"
                 height="400"
                 style={{ borderRadius: '12px', border: 'none', display: 'block' }}
                 allowFullScreen
+              />
+            </div>
+          ))}
+          {videoLessons.map((lesson) => (
+            <div key={lesson.title} style={cardStyle}>
+              <p style={titleStyle}>{lesson.title}</p>
+              <video
+                src={lesson.src}
+                controls
+                width="100%"
+                style={{ borderRadius: '12px', display: 'block' }}
               />
             </div>
           ))}

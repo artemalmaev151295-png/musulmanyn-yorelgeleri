@@ -93,7 +93,7 @@ export default function IslamicDiagram() {
 
       <div
         className="ayah-card main-menu-card"
-        onClick={() => navigateTo('tajwid')}
+        onClick={() => navigateTo('surah')}
         style={{
           cursor: 'pointer',
           background: 'linear-gradient(135deg, rgba(139, 90, 43, 0.2) 0%, rgba(76, 49, 23, 0.2) 100%)',

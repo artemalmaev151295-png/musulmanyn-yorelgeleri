@@ -759,6 +759,7 @@ export default function IslamicDiagram() {
         padding: '1.5rem',
         backdropFilter: 'blur(10px)'
       }}>
+        <p style={{ color: 'white' }}>{JSON.stringify(currentLesson)}</p>
         <iframe src={currentLesson?.src} width="100%" height="400" style={{ borderRadius: '12px', border: 'none', display: 'block' }} allow="autoplay; fullscreen; encrypted-media" allowFullScreen />
       </div>
     </div>

@@ -724,6 +724,7 @@ export default function IslamicDiagram() {
   const TajwidLevel = () => (
     <div className="level-container">
       <h2 className="surah-title">Tajwid sapaklary</h2>
+      <p style={{ color: 'white' }}>{tajwidLessons.length}</p>
       <div style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
         {tajwidLessons.map((lesson) => (
           <div

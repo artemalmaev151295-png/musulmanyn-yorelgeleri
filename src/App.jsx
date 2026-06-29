@@ -721,7 +721,9 @@ export default function IslamicDiagram() {
     { title: '5-nji ders',  src: 'https://player.cloudinary.com/embed/?cloud_name=dv9zimdzx&public_id=5-nji_ders_affhzn' },
   ];
 
-  const TajwidLevel = () => (
+  const TajwidLevel = () => {
+    console.log('tajwidLessons.length:', tajwidLessons.length);
+    return (
     <div className="level-container">
       <h2 className="surah-title">Tajwid sapaklary</h2>
       <p style={{ color: 'white' }}>{tajwidLessons.length}</p>
@@ -748,7 +750,8 @@ export default function IslamicDiagram() {
         ))}
       </div>
     </div>
-  );
+    );
+  };
 
   const TajwidLessonLevel = () => (
     <div className="level-container">

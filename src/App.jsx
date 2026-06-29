@@ -93,18 +93,18 @@ export default function IslamicDiagram() {
 
       <div
         className="ayah-card main-menu-card"
-        onClick={() => navigateTo('surah')}
+        onClick={() => { console.log('TAJWID CLICKED'); navigateTo('surah'); }}
         style={{
           cursor: 'pointer',
-          background: 'linear-gradient(135deg, rgba(139, 90, 43, 0.2) 0%, rgba(76, 49, 23, 0.2) 100%)',
-          borderColor: 'rgba(212, 175, 122, 0.4)',
+          background: 'red',
+          borderColor: 'yellow',
           justifyContent: 'center',
           minHeight: 'unset'
         }}
       >
         <div className="ayah-content" style={{ width: '100%', textAlign: 'center', padding: '0.45rem 1rem' }}>
-          <p style={{ color: '#f4e4c1', fontSize: '1.35rem', fontWeight: '700', lineHeight: '1.35' }}>
-            Tajwid sapaklary
+          <p style={{ color: 'white', fontSize: '1.35rem', fontWeight: '700', lineHeight: '1.35' }}>
+            TAJWID TEST — CLICK ME
           </p>
         </div>
       </div>

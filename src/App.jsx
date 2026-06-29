@@ -32,8 +32,8 @@ export default function IslamicDiagram() {
           minHeight: 'unset'
         }}
       >
-        <div className="ayah-content" style={{ width: '100%', textAlign: 'left', padding: '0.3rem 0.5rem' }}>
-          <p style={{ color: '#f4e4c1', fontSize: '1.1rem', fontWeight: '700', lineHeight: '1.3' }}>
+        <div className="ayah-content" style={{ width: '100%', textAlign: 'center', padding: '0.45rem 1rem' }}>
+          <p style={{ color: '#f4e4c1', fontSize: '1.35rem', fontWeight: '700', lineHeight: '1.35' }}>
             Musulmanyň ilkinji bilmeli zady
           </p>
         </div>

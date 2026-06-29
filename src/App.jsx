@@ -721,7 +721,7 @@ export default function IslamicDiagram() {
     ];
 
     const videoLessons = [
-      { title: '5-nji ders',  src: 'https://res.cloudinary.com/dv9zimdzx/video/upload/v1782553248/5-nji_ders_affhzn.mp4' },
+      { title: '5-nji ders',  src: 'https://res.cloudinary.com/dv9zimdzx/video/upload/v1782553248/5-nji_ders_affhzn.mp4', type: 'video' },
       { title: '6-nji ders',  src: 'https://player.cloudinary.com/embed/?cloud_name=dv9zimdzx&public_id=6-nji_ders_hy6bud' },
       { title: '7-nji ders',  src: 'https://player.cloudinary.com/embed/?cloud_name=dv9zimdzx&public_id=7-nji_ders_aksgnk' },
       { title: '8-nji ders',  src: 'https://player.cloudinary.com/embed/?cloud_name=dv9zimdzx&public_id=8-nji_ders_ly7ree' },
@@ -779,13 +779,22 @@ export default function IslamicDiagram() {
           {videoLessons.map((lesson) => (
             <div key={lesson.title} style={cardStyle}>
               <p style={titleStyle}>{lesson.title}</p>
-              <iframe
-                src={lesson.src}
-                width="100%"
-                height="400"
-                style={{ borderRadius: '12px', border: 'none', display: 'block' }}
-                allowFullScreen
-              />
+              {lesson.type === 'video' ? (
+                <video
+                  src={lesson.src}
+                  controls
+                  width="100%"
+                  style={{ borderRadius: '12px', display: 'block' }}
+                />
+              ) : (
+                <iframe
+                  src={lesson.src}
+                  width="100%"
+                  height="400"
+                  style={{ borderRadius: '12px', border: 'none', display: 'block' }}
+                  allowFullScreen
+                />
+              )}
             </div>
           ))}
         </div>

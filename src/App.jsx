@@ -718,32 +718,7 @@ export default function IslamicDiagram() {
     { title: '2-nji ders',  src: 'https://player.cloudinary.com/embed/?cloud_name=dv9zimdzx&public_id=2-nji-ders_escmlb' },
     { title: '3-nji ders',  src: 'https://player.cloudinary.com/embed/?cloud_name=dv9zimdzx&public_id=3-nji_ders_rv9934' },
     { title: '4-nji ders',  src: 'https://player.cloudinary.com/embed/?cloud_name=dv9zimdzx&public_id=4-nji_ders_e3fxuc' },
-    { title: '5-nji ders',  src: 'https://player.cloudinary.com/embed/?cloud_name=dv9zimdzx&public_id=5-nji_ders_affhzn&playerType=chromeless', mp4: 'https://res.cloudinary.com/dv9zimdzx/video/upload/v1782553248/5-nji_ders_affhzn.mp4' },
-    { title: '6-nji ders',  src: 'https://player.cloudinary.com/embed/?cloud_name=dv9zimdzx&public_id=6-nji_ders_hy6bud' },
-    { title: '7-nji ders',  src: 'https://player.cloudinary.com/embed/?cloud_name=dv9zimdzx&public_id=7-nji_ders_aksgnk' },
-    { title: '8-nji ders',  src: 'https://player.cloudinary.com/embed/?cloud_name=dv9zimdzx&public_id=8-nji_ders_ly7ree' },
-    { title: '9-nji ders',  src: 'https://player.cloudinary.com/embed/?cloud_name=dv9zimdzx&public_id=9-nji_ders_ohsngz' },
-    { title: '10-nji ders', src: 'https://player.cloudinary.com/embed/?cloud_name=dv9zimdzx&public_id=10_-nji_ders_wyokik' },
-    { title: '11-nji ders', src: 'https://player.cloudinary.com/embed/?cloud_name=dv9zimdzx&public_id=11-nji_ders_caf4sx' },
-    { title: '12-nji ders', src: 'https://player.cloudinary.com/embed/?cloud_name=dv9zimdzx&public_id=12-nji_ders_asbjaw' },
-    { title: '13-nji ders', src: 'https://player.cloudinary.com/embed/?cloud_name=dv9zimdzx&public_id=13-nji_ders_ygd4rn' },
-    { title: '14-nji sapak', src: 'https://player.cloudinary.com/embed/?cloud_name=dv9zimdzx&public_id=14-njy_sapak_s1hsuk' },
-    { title: '15-nji sapak', src: 'https://player.cloudinary.com/embed/?cloud_name=dv9zimdzx&public_id=15-nji_sapak_k4zwev' },
-    { title: '16-nji sapak', src: 'https://player.cloudinary.com/embed/?cloud_name=dv9zimdzx&public_id=16-nji_sapak_bmkx9d' },
-    { title: '17-nji sapak', src: 'https://player.cloudinary.com/embed/?cloud_name=dv9zimdzx&public_id=17-njy_sapak_u8dwas' },
-    { title: '18-nji sapak', src: 'https://player.cloudinary.com/embed/?cloud_name=dv9zimdzx&public_id=18-nji_sapak_udi5pf' },
-    { title: '19-nji sapak', src: 'https://player.cloudinary.com/embed/?cloud_name=dv9zimdzx&public_id=19-njy_sapak_aynuhp' },
-    { title: '20-nji sapak', src: 'https://player.cloudinary.com/embed/?cloud_name=dv9zimdzx&public_id=20-nji_sapak_hzcx20' },
-    { title: '21-nji sapak', src: 'https://player.cloudinary.com/embed/?cloud_name=dv9zimdzx&public_id=21-nji_sapak_cmsdo5' },
-    { title: '22-nji sapak', src: 'https://player.cloudinary.com/embed/?cloud_name=dv9zimdzx&public_id=22-nji_sapak_x1umkz' },
-    { title: '23-nji sapak', src: 'https://player.cloudinary.com/embed/?cloud_name=dv9zimdzx&public_id=23-nji_sapak_tddlbb' },
-    { title: '24-nji sapak', src: 'https://player.cloudinary.com/embed/?cloud_name=dv9zimdzx&public_id=24-nji_sapak_t3wmju' },
-    { title: '25-nji sapak', src: 'https://player.cloudinary.com/embed/?cloud_name=dv9zimdzx&public_id=25-nji_sapak_dkcstt' },
-    { title: '26-nji sapak', src: 'https://player.cloudinary.com/embed/?cloud_name=dv9zimdzx&public_id=26-nji_sapak_nxuag7' },
-    { title: '27-nji sapak', src: 'https://player.cloudinary.com/embed/?cloud_name=dv9zimdzx&public_id=27-njy_sapak_aiqycp' },
-    { title: '28-nji sapak', src: 'https://player.cloudinary.com/embed/?cloud_name=dv9zimdzx&public_id=28-nji_sapak_zcgriy' },
-    { title: '29-nji sapak', src: 'https://player.cloudinary.com/embed/?cloud_name=dv9zimdzx&public_id=29-njy_sapak_ljfbdj' },
-    { title: '30-nji sapak', src: 'https://player.cloudinary.com/embed/?cloud_name=dv9zimdzx&public_id=30-nji_sapak_t4nlqv' },
+    { title: '5-nji ders',  src: 'https://player.cloudinary.com/embed/?cloud_name=dv9zimdzx&public_id=5-nji_ders_affhzn' },
   ];
 
   const TajwidLevel = () => (
@@ -785,16 +760,6 @@ export default function IslamicDiagram() {
         backdropFilter: 'blur(10px)'
       }}>
         <iframe src={currentLesson?.src} width="100%" height="400" style={{ borderRadius: '12px', border: 'none', display: 'block' }} allow="autoplay; fullscreen; encrypted-media" allowFullScreen />
-        {currentLesson?.mp4 && (
-          <a
-            href={currentLesson.mp4}
-            target="_blank"
-            rel="noreferrer"
-            style={{ display: 'block', marginTop: '1rem', color: '#d4af7a', fontSize: '1rem', textAlign: 'center' }}
-          >
-            ▶ Sapagy açmak
-          </a>
-        )}
       </div>
     </div>
   );
